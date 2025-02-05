@@ -16,4 +16,4 @@ print("Hello", name)
 name = "Joshua"
 print("Hello", name)
 # This would print out "Hello Joshua"
-# The variable name is a string that holds the entered name and is used to print Hello, t
+# The variable name is a string that holds the entered name and is used to print Hello, and the name
