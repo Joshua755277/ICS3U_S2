@@ -1,7 +1,7 @@
 # Predict 
-# I predict the program will print Please input a length: and waits for the user to enter a length
+# I predict the program will print "Please input a length: " and then waits for the user to enter a length
 # It will then set the number you inputted as a float type variable and then take that number to the power of 2 and set the value to a new variable called area
-# Then it will output the area of a square of side length (length the user entered) is: (result of entered number to the power of 2)
+# Then it will output "The area of a square of side length (length the user entered) is: (result of entered number to the power of 2)"
 
 # Run
 # My prediction was correct
