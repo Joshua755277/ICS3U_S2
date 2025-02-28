@@ -2,32 +2,48 @@
 
 print("Welcome to the even and odd detector!")
 print("This program determines if the product of two whole positive numbers will be even or odd!")
+# Prints out description of what the program will do
 
 a = int(input("Please enter your first number: "))
+# Asks and waits for the users input for the first number
 b = int(input("Please enter your second number: "))
+# Ask and waits for the unders input for the seecond number
 
 if (a % 2 == 1 and b % 2 == 1):
+  # Checks if both the first number and second number is odd
   print("The product ", a, "x", b, " will be odd.")
+  # Prints out the result of the 2 numbers will be odd since both the first and second numbers are odd
   
 elif (a % 2 == 0 and b % 2 == 0):
+  # Checks if both the first number and second number is odd
   print("The product ", a, "x", b, " will be even.")
-  
+  # Prints out the result of the 2 numbers will be even since both the first and second numbers are even
+
 elif (a % 2 == 1 and b % 2 == 0):
+  # Checks if the first number is odd and if the second number is even
   print("The product ", a, "x", b, " will be even.")
+  # Prints out the result of the 2 numbers will be even since one of the numbers is even and one of the numbers is odd
   
 else:
-    print("The product ", a, "x", b, " will be even.")
+  print("The product ", a, "x", b, " will be even.")
+  # This will run when the first number is even and the second number is off
 
 # Part 2: The inner (or body) diagonal of a cube
+
 import math
 
 print("I will find the cube's inner diagonal for any edge length!")
+# Prints out description of what the program will do
 
 a = int(input("Please enter the edge length of your cube:"))
+# Asks user for a number as an edge length of the cube
 d = a * math.sqrt(3)
+# Calculates the diagonal of the cube (variable d) by using the number the user inputted 
 d = round(d, 2)
+# Rounds the value of the diagonal for the cube to 2 decimal places
 
-print("The length of the inner diagonal of a cube with side length 8 is:", d)
+print("The length of the inner diagonal of a cube with side length %.f is: %.2f" % (a,d))
+# Prints out the length of the inner diagonal of the cube with the side length the user inputted
 
 # Part 3: Making change in coins
 
