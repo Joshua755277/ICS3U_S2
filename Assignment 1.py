@@ -2,6 +2,7 @@
 
 """
    Author : Joshua Li
+   Student Number : 75577
    Revison date : 2 Febuary 2025
    Program : Even or Odd
    Description : A program to determine if the product of 2 numbers will be even or odd
@@ -42,6 +43,7 @@ else:
 
 """
    Author : Joshua Li
+   Student Number : 75577
    Revison date : 2 Febuary 2025
    Program : Length of a Diagonal in a Cube
    Description : A calculator to determine the inner length or diagonal of a cube
@@ -69,6 +71,7 @@ print("The length of the inner diagonal of a cube with side length %.f is: %.2f"
 
 """
    Author : Joshua Li
+   Student Number : 75577
    Revison date : 2 Febuary 2025
    Program : Making Change in Coins
    Description : a Program that makes change for amounts less than $1.00 using the fewest coins
