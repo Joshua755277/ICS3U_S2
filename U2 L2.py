@@ -20,3 +20,9 @@ while (count != 0):
     print(count)
 
 # The output is different and it will start from 8 to 0 instead of 9 to 1
+
+# Part B
+
+count = 6
+while (count != 0):
+    count -= 1    
