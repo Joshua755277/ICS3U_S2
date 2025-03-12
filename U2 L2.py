@@ -23,6 +23,37 @@ while (count != 0):
 
 # Part B
 
-count = 6
-while (count != 0):
-    count -= 1    
+counter = 1
+while (counter <= 6):
+    row = 1
+    triangle_total = 0
+    while (row <= counter):
+        triangle_total += row
+        row += 1
+    counter += 1
+    
+    suffex = "th"
+    if (counter == 1):
+      suffex = "st"
+    elif (counter == 2):
+      suffex = "nd"
+    elif (counter == 3):
+      suffex = "rd"
+    print("The %d%s triangular is %d" % (counter, suffex, triangle_total))
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
