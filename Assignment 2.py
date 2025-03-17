@@ -7,9 +7,9 @@
    Description : A game for the user to guess the randomly generated number using hints 
    such as if their guess is higher or lower than the desired number with only 6 attempts
    VARIABLE DICTIONARY :
-     tries (int) = The first number the user inputted  
-     answer (int) = The second number the user inputted 
-     guess_num (int) 
+     tries (int) = Counter to track the number of guesses made by the user
+     answer (int) =  Randomly generated number between 1 to 100
+     guess (int) =  The user's inputted guess during the game
 """
 import random
 # Imports random module to generate a random number
@@ -27,7 +27,9 @@ guess_num = 1
 
 while tries < 6:
    # Runs the loop 6 times since you are only allowed 6 guesses
-  guess = int(input("Guess #%d: " % guess_num))
+   tries += 1
+  # Increases tries by 1 so the loop runs 6 times
+  guess = int(input("Guess #%d: " % tries))
    # Asks the user for their guess
 
   if guess == answer:
@@ -46,11 +48,6 @@ while tries < 6:
     # Checks if the user's guess is smaller than the generated answer
     print("Higher!")
     # Tells the user to guess higher
-    
-  tries += 1
-  # Increases tries by 1 so the loop runs 6 times
-  guess_num += 1
-  # Increases the guess number by one so it displays the correct number of guesses
 
 if guess != answer:
   # Checks if your guess is not the correct answer
