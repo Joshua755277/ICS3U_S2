@@ -22,8 +22,6 @@ tries = 0
 # Defines tries and sets it to 0
 answer = random.randint(1, 100)
 # Generates a random number under from 1 to 100 under the variable answer
-guess_num = 1
-# Counts the number of guesses
 
 while tries < 6:
    # Runs the loop 6 times since you are only allowed 6 guesses
