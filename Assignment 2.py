@@ -24,16 +24,16 @@ answer = random.randint(1, 100)
 # Generates a random number under from 1 to 100 under the variable answer
 
 while tries < 6:
-   # Runs the loop 6 times since you are only allowed 6 guesses
-   tries += 1
+  # Runs the loop 6 times since you are only allowed 6 guesses
+  tries += 1
   # Increases tries by 1 so the loop runs 6 times
   guess = int(input("Guess #%d: " % tries))
-   # Asks the user for their guess
+  # Asks the user for their guess
 
   if guess == answer:
-     # Checks if the users guess is the same as the generated  number
+    # Checks if the users guess is the same as the generated  number
     print("You guessed right!")
-     # Prints "You guessed right!" 
+    # Prints "You guessed right!" 
     tries = 6
     # Sets tries equal to 6 thus ending the loop
 
