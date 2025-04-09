@@ -49,7 +49,6 @@ for word in word_list:
       # Prints out the word is a palindrome
       letter_position = halfway
       # Sets letter_position to halfway which would end the loop
-      
-      
+           
 print("Goodbye!")
 # Prints Goodbye!
