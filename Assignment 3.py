@@ -47,8 +47,6 @@ for word in word_list:
     # When the number of letter matches is equal to the halfway point
       print(word, "is a palindrome")
       # Prints out the word is a palindrome
-      letter_position = halfway
-      # Sets letter_position to halfway which would end the loop
            
 print("Goodbye!")
 # Prints Goodbye!
