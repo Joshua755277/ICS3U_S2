@@ -6,7 +6,7 @@
    Program : Is it a Palindrome?
    Description : A program to determine which words inside an array are a palindrome or not
    VARIABLE DICTIONARY :
-     word_list (collection) = An array with 10 different words with some being a palindrome
+     word_list (list) = An array with 10 different words with some being a palindrome
      word (string) = Singular word in the array word_list
      letter_position (int) = The position of the character in the word 
      letter_matches (int) = The number of matches between the letter and the corresponding letters from the end
