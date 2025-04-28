@@ -29,6 +29,12 @@ else:
 
 # Modify 2
 
-b = -12
-a = abs(b)
-print("The absolute value of %d is %d" % (b, a))
+def absolute(n):
+   if n < 0:
+      return n* -1
+   else:
+      return n
+
+print(absolute(-100))
+print(absolute(-100))
+
