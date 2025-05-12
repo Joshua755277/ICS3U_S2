@@ -10,25 +10,37 @@ def hx(TdegC: float, dewPtC: float) -> float:
      * hTemp: humidex in degrees C
     """
     hTemp = 0.0
-    
-    
-    p = 5417.753 * (((1/273.15)-(1/(273.15+dewPtC)))-5.55)
-    hTemp = TdegC + 3.39105 * math.exp(p)
 
-
+    p = 5417.753 * ((1 / 273.15) - (1 / (273.15 + dewPtC)))
+    hTemp = TdegC + 5.0 / 9.0 * (6.11 * math.exp(p) - 10)
 
     return hTemp
 
-# Main Program
-# Your function must work with this code!
-# Do not modify!
+def humidex(hTemp):
+  hTemp = hx(T, D)
+  
+  if hTemp < 30:
+    return "Normal"
+  elif 30 <= hTemp < 39:
+    return "Causes some discomfort"
+  elif 40 <= hTemp < 44:
+    return "Causes great discomfort"
+  elif 45 <= hTemp < 49:
+    return "Considered dangerous"
+  else:
+    return "Heat stroke is very likely"
 
 T = 28.0
 D = 26.0
-print("H=%6.3f T=%6.3f D=%6.3f" % (hx(T, D), T, D))
+h = hx(T, D)
+print("H=%6.3f T=%6.3f D=%6.3f Warning: %s" % (h, T, D, humidex(h)))
+
 T = 30.0
 D = 20.0
-print("H=%6.3f T=%6.3f D=%6.3f" % (hx(T, D), T, D))
+h = hx(T, D)
+print("H=%6.3f T=%6.3f D=%6.3f Warning: %s" % (h, T, D, humidex(h)))
+
 T = 26.0
 D = 28.0
-print("H=%6.3f T=%6.3f D=%6.3f\n" % (hx(T, D), T, D))
+h = hx(T, D)
+print("H=%6.3f T=%6.3f D=%6.3f Warning: %s" % (h, T, D, humidex(h)))
