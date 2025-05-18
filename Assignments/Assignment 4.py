@@ -1,26 +1,37 @@
 # Open the file "wordle.dat" for reading
 f = open("wordle.dat")
 
-EndOfFile = False  # Flag to check for end-of-file
-arr = []  # Creates array to store lines from the file
-dateNum = []  # Creates array to store numerical representations of dates
-words = []  # Creates array to store Wordle words
+# Flag to check for end-of-file
+EndOfFile = False  
+# Creates array to store lines from the file
+arr = []  
+# Creates array to store numerical representations of dates
+dateNum = []  
+# Creates array to store Wordle words
+words = []  
 
 # List of month abbreviations for conversion to numerical value
 month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 # Tries to read file and catches error
 try:
-    while not EndOfFile:  # Loop until the end of the file is reached
-        line = f.readline().strip()  # Reads a line and remove leading/trailing spaces
-        EndOfFile = (line == "")  # Check if the next line is empty/
+    # Loop until the end of the file is reached
+    while not EndOfFile:
+        # Reads a line and remove leading/trailing spaces
+        line = f.readline().strip()  
+        # Check if the next line is empty
+        EndOfFile = (line == "")  
         if not EndOfFile:
-            arr.append(line)  # Store the line in the array if it's not empty
-    f.close()  # Close the file after reading all lines
+            # Store the line in the array if it's not empty
+            arr.append(line)  
+    # Close the file after reading all lines
+    f.close()  
 except OSError:
-    print("OSError")  # Print error message if there is an issue opening or reading the file
+    # Print error message if there is an issue opening or reading the file
+    print("OSError")  
 except EOFError:
-    print("EOFError")  # Print error message if the end of file is unexpectedly reached
+    # Print error message if the end of file is unexpectedly reached
+    print("EOFError")  
 
 # Cycles through each line from the file
 for x in range(len(arr)):
@@ -73,7 +84,7 @@ if choice == "D":
         else:
             # Runs if user inputs a date too early
             print(user_date, "is too recent. Our records only go as late as 20240421. Please enter an earlier date.") 
-    except ValueError:\
+    except ValueError:
         # Handles invalid input
         print("Invalid input. Please enter numeric values for the year and day.")  
 
