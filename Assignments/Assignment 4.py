@@ -1,8 +1,34 @@
-# Open the file "wordle.dat" for reading
-f = open("wordle.dat")
+"""
+Author : Joshua Li
+Student number: 755277
+Course code: ICS3U
+Revision date : May 19, 2025
+Program : Wordle Database Search
+Description : A program that accesses a Wordle solution file, allowing users to 
+              look up solutions by date or determine when a specific word was featured.
 
-# Flag to check for end-of-file
-EndOfFile = False  
+VARIABLE DICTIONARY :
+  arr (list) = Stores lines read from the Wordle solution file
+  dateNum (list) = Stores all dates in integer YYYYMMDD format
+  words (list) = Stores all the words from the file
+  month (list) = Contains month abbreviations used to convert month names to numbers
+  f (file) = Used to open and read the wordle.dat file
+  EndOfFile (bool) = Flags whether the end of the file has been reached
+  line (str) = Temporarily stores a line read from the file before processing
+  monthS (str) = Stores the month abbreviation extracted from a line of the file
+  day (str) = Stores the day extracted from a line of the file
+  year (str) = Stores the year extracted from a line of the file
+  word (str) = Stores the Wordle solution word extracted from a line of the file
+  monthNum (int) = Stores the numerical representation of a month
+  date (int) = Stores a date converted into YYYYMMDD format
+  choice (str) = Stores the user input for selecting either word or date search
+  user_year (int) = Stores the year input by the user when searching by date
+  user_month (int) = Stores the month input by the user when searching by date
+  user_day (int) = Stores the day input by the user when searching by date
+  user_date (int) = Stores the date input by the user when searching for a date
+  user_word (str) = Stores the word entered by the user when searching for a word
+"""
+
 # Creates array to store lines from the file
 arr = []  
 # Creates array to store numerical representations of dates
@@ -15,6 +41,10 @@ month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "
 
 # Tries to read file and catches error
 try:
+    # Open the file "wordle.dat" for reading
+    f = open("wordle.dat", "r")
+    # Flag to check for end-of-file
+    EndOfFile = False  
     # Loop until the end of the file is reached
     while not EndOfFile:
         # Reads a line and remove leading/trailing spaces
@@ -51,10 +81,10 @@ for x in range(len(arr)):
 print("Welcome to the Wordle Database!")
 
 # Get user choice for searching by word or date and also converets to uppercase
-choice = input("Enter w if you are looking for a word, or d for a word on a certain date: ").upper
+choice = input("Enter w if you are looking for a word, or d for a word on a certain date: ").upper()
 
 # Makes sure user input is valid
-if choice != "D" or "W":
+if choice != "D" and choice != "W":
     # Asks for user input
     print("Please enter one of the options")  
 
@@ -65,9 +95,9 @@ if choice == "D":
         # Gets the year from the user
         user_year = int(input("Enter the year: ")) 
         # Gets the month from the user
-        user_month = input("Enter the month (3-letter abbreviation, as in 'Jan' for 'January'): ")  
+        user_month = input("Enter the month (3-letter abbreviation, as in 'Jan' for 'January'): ") 
         # Converts month abbreviation to number
-        user_month = month.index(user_month) + 1  
+        user_month = month.index(user_month.capitalize()) + 1  
         # Get the day
         user_day = int(input("Enter the day: ")) 
 
