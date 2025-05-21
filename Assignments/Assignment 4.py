@@ -39,6 +39,14 @@ words = []
 # List of month abbreviations for conversion to numerical value
 month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
+# Creates a function to combine the users input into one number
+def merge(user_year, user_month, user_day):
+    # Convert input date to numeric format YYYYMMDD
+    user_date = user_year * 10000 + (user_month * 100) + user_day
+    # Returns user_date
+    return user_date
+
+
 # Tries to read file and catches error
 try:
     # Open the file "wordle.dat" for reading
@@ -71,9 +79,8 @@ for x in range(len(arr)):
     monthNum = month.index(monthS) + 1  
     # Stores the word in words array
     words.append(word) 
-
     # Convert the date into an integer format YYYYMMDD
-    date = int(year) * 10000 + (monthNum * 100) + int(day)
+    date = merge(int(year), int(monthNum), int(day))         
     # Stores the numerical date in dateNum array
     dateNum.append(date)  
 
@@ -99,11 +106,9 @@ if choice == "D":
         # Converts month abbreviation to number
         user_month = month.index(user_month.capitalize()) + 1  
         # Get the day
-        user_day = int(input("Enter the day: ")) 
-
-        # Convert input date to numeric format YYYYMMDD
-        user_date = user_year * 10000 + (user_month * 100) + user_day
-
+        user_day = int(input("Enter the day: "))
+        # Calls the function and merges the user's input into the form YYYYMMDD
+        user_date = merge(user_year, user_month, user_day) 
         # Check if the date is within the valid range
         if 20210619 <= user_date <= 20240421:
             # Display the word for the date entered by the user
