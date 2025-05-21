@@ -40,12 +40,9 @@ words = []
 month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 # Creates a function to combine the users input into one number
-def merge(user_year, user_month, user_day):
-    # Convert input date to numeric format YYYYMMDD
-    user_date = user_year * 10000 + (user_month * 100) + user_day
-    # Returns user_date
-    return user_date
-
+def merge(p, q, r):
+    # Convert input date to numeric format YYYYMMDD and returns the value
+    return p * 10000 + (q * 100) + r
 
 # Tries to read file and catches error
 try:
