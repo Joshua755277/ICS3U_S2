@@ -7,11 +7,11 @@ Description : Reads credit card data from a file, sorts by expiry date, validate
               the Luhn algorithm, and outputs status to both the screen and an output file.
 
 VARIABLE DICTIONARY :
-    arr (list[str]) - Stores all lines read from the input file (excluding the header)
-    FullName (list[str]) - Stores full names (first and last) of all cardholders
-    CCTypes (list[str]) - Stores the type of each credit card (e.g., VISA, Mastercard)
-    CCNumbers (list[str]) - Stores the credit card numbers as strings
-    Expiry_Dates (list[int]) - Stores expiry dates in the format YYYYMM as integers
+    arr (list) - Stores all lines read from the input file (excluding the header)
+    FullName (list) - Stores full names (first and last) of all cardholders
+    CCTypes (list) - Stores the type of each credit card (e.g., VISA, Mastercard)
+    CCNumbers (list) - Stores the credit card numbers as strings
+    Expiry_Dates (list) - Stores expiry dates in the format YYYYMM as integers
     output_file_name (str) - Name of the output file where the report is written
     output_file (file object) - File handle used to write the output report
     first_line (str) - Header line from the input file (removed before processing)
