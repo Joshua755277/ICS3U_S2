@@ -1,7 +1,7 @@
 """
 Author : Joshua Li
 Student Number: 755277
-Revision Date : 6.13.2025
+Revision Date : 6/13/2025
 Program : Credit Card Expiry and Validation Report
 Description : Reads credit card data from a file, sorts by expiry date, validates card numbers using 
               the Luhn algorithm, and outputs status to both the screen and an output file.
