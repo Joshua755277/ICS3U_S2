@@ -256,13 +256,13 @@ output_file = open(output_file_name, "w")
 # Open output file for writing
 
 for i in range(len(Expiry_Dates)):
-    if Expiry_Dates[i] > 202501:
+    if Expiry_Dates[i] > 202506:
         continue
         # Stop processing if expiry date is beyond January 2025
-    if Expiry_Dates[i] == 202501:
+    if Expiry_Dates[i] == 202506:
         Expired_Text = "RENEW IMMEDIATELY"
         # Set renewal message for January 2025
-    elif Expiry_Dates[i] < 202501:
+    elif Expiry_Dates[i] < 202506:
         Expired_Text = "EXPIRED"
         # Mark cards with past expiry as expired
     validity = "VALID" if validate(CCNumbers[i]) else "INVALID"
