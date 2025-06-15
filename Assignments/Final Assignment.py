@@ -257,7 +257,7 @@ output_file = open(output_file_name, "w")
 
 for i in range(len(Expiry_Dates)):
     if Expiry_Dates[i] > 202501:
-        break
+        continue
         # Stop processing if expiry date is beyond January 2025
     if Expiry_Dates[i] == 202501:
         Expired_Text = "RENEW IMMEDIATELY"
