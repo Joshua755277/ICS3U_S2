@@ -225,7 +225,7 @@ except OSError:
 except EOFError:
     print("EOFError")
     # Handle end-of-file error
-first_line = arr.pop(0)
+first_line = arr.remove(arr[0])
 # Remove header line from data
 
 for x in arr:
@@ -269,8 +269,3 @@ for i in range(len(Expiry_Dates)):
     # Validate card number using Luhn algorithm
     print("%-37s %-15s %-20s %-10s %-25s" % (FullName[i] + ':', CCTypes[i], '#' + CCNumbers[i], Expiry_Dates[i], Expired_Text + " | " + validity))
     # Print formatted output
-    output_file.write("%-37s %-15s %-20s %-10s %-25s\n" % (FullName[i] + ':', CCTypes[i], '#' + CCNumbers[i], Expiry_Dates[i], Expired_Text + " | " + validity))
-    # Write formatted output to file
-
-output_file.close()
-# Close output file
