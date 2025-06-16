@@ -259,7 +259,7 @@ for i in range(len(Expiry_Dates)):
     if Expiry_Dates[i] > 202506:
         continue
         # Stop processing if expiry date is beyond January 2025
-    if Expiry_Dates[i] == 202506:
+    if Expiry_Dates[i] == 202506 or Expiry_Dates[i] == 202505:
         Expired_Text = "RENEW IMMEDIATELY"
         # Set renewal message for January 2025
     elif Expiry_Dates[i] < 202506:
