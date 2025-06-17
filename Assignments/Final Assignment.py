@@ -12,8 +12,6 @@ VARIABLE DICTIONARY :
     CCTypes (list) - Stores the type of each credit card (e.g., VISA, Mastercard)
     CCNumbers (list) - Stores the credit card numbers as strings
     Expiry_Dates (list) - Stores expiry dates in the format YYYYMM as integers
-    output_file_name (str) - Name of the output file where the report is written
-    output_file (file object) - File handle used to write the output report
     first_line (str) - Header line from the input file (removed before processing)
     f (file object) - File handle used to read from the input file
     line (str) - Temporarily stores each line read from the input file
@@ -250,10 +248,6 @@ for x in arr:
 
 mergeSort(Expiry_Dates, FullName, CCNumbers, CCTypes, 0, len(Expiry_Dates) - 1)
 # Sort all data by expiry date
-output_file_name = "output.txt"
-# Define output file name
-output_file = open(output_file_name, "w")
-# Open output file for writing
 
 for i in range(len(Expiry_Dates)):
     if Expiry_Dates[i] > 202506:
@@ -265,7 +259,12 @@ for i in range(len(Expiry_Dates)):
     elif Expiry_Dates[i] < 202506:
         Expired_Text = "EXPIRED"
         # Mark cards with past expiry as expired
-    validity = "VALID" if validate(CCNumbers[i]) else "INVALID"
-    # Validate card number using Luhn algorithm
+    if validate(CCNumbers[i]):
+        # Validate card number using Luhn algorithm
+        validity = "VALID"
+        # If valid, set the validity status to "VALID"
+    else:
+        validity = "INVALID"
+        # If invalid, set the validity status to "INVALID"
     print("%-37s %-15s %-20s %-10s %-25s" % (FullName[i] + ':', CCTypes[i], '#' + CCNumbers[i], Expiry_Dates[i], Expired_Text + " | " + validity))
     # Print formatted output
